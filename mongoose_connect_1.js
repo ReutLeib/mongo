@@ -18,7 +18,9 @@ var mongoose = require('mongoose'),
 mongoose.connect(consts.MLAB_KEY);
 
 //define the MODEL:
-var User = require('./define_schema_2');
+var UserSchema = require('./define_schema_1');
+var User = mongoose.model('User',UserSchema);
+
 
 mongoose.connect(consts.MLAB_KEY).then( () =>{
     console.log(`connected: ${User}`);
