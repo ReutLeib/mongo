@@ -12,19 +12,24 @@
 //     console.log('Our app is running on http://localhost:' + port);
 // });
 
-var consts    = require('./consts'),
-    mongoose  = require('mongoose');
+
+var mongoose = require('mongoose'),
+    consts   = require('./consts');
 
 mongoose.connect(consts.MLAB_KEY);
-//define the MODEL:
-var User = require('./define_schema_2');
 
-mongoose.connect(consts.MLAB_KEY).then(
-  () =>{
-    console.log(`connected: ${User}`);
+//define the MODEL:
+var UserSchema = require('./define_schema_1');
+var User = mongoose.model('User',UserSchema);
+
+
+mongoose.connect(consts.MLAB_KEY).then( () =>{
+    console.log(`connected: ${UserSchema}`);
     mongoose.disconnect();
   },
-  err => {
-    console.log(`connection error:${err}`);
+  err =>{
+    console.log(`connection error: ${err}`);
   }
-  )
+
+);
+
