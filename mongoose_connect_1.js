@@ -17,12 +17,11 @@ var consts    = require("./consts"),
 
 mongoose.connect(consts.MLAB_KEY);
 //define the MODEL:
-var userSchema = require('./define_schema_1'),
-    user       = mongoose.model('User',userSchema);
-    
+var userSchema = require('./define_schema_2');
+
 mongoose.connect(consts.MLAB_KEY).then(
   () =>{
-    console.log('connected');
+    console.log(`connected: ${user}`);
     mongoose.disconnect();
   },
   err => {
