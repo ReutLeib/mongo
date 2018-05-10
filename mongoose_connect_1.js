@@ -23,7 +23,7 @@ var User = mongoose.model('User',UserSchema);
 
 
 mongoose.connect(consts.MLAB_KEY).then( () =>{
-    console.log(`connected: ${User}`);
+    console.log(`connected: ${UserSchema}`);
     mongoose.disconnect();
   },
   err =>{
