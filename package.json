@@ -2,10 +2,10 @@
   "name": "mongo",
   "version": "1.0.0",
   "description": "",
-  "main": "mongoose_connect_1.js",
+  "main": "mongoose_connect_2.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node mongoose_connect_1.js"
+    "start": "node mongoose_connect_2.js"
   },
   "author": "Reut",
   "license": "ISC",
