@@ -12,7 +12,7 @@
 //     console.log('Our app is running on http://localhost:' + port);
 // });
 
-var consts    = require("./consts"),
+var consts    = require('./consts'),
     mongoose  = require('mongoose');
 
 mongoose.connect(consts.MLAB_KEY);

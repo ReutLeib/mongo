@@ -21,6 +21,6 @@ var mongoose  = require('mongoose'),
 
 // console.log(`required paths: ${user.requiredPaths()}`); 
 // console.log(`indexes: ${JSON.stringify(user.indexes())}`);
-   var user = mongoose.model('User',userSchema);
+   var user = mongoose.model('User',user);
 
 module.exports = user;
