@@ -5,7 +5,7 @@
   "main": "mongoose_connect_2.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node mongoose_connect_2.js"
+    "start": "node mongoose_connect_1.js"
   },
   "author": "Reut",
   "license": "ISC",
