@@ -11,23 +11,42 @@
 // app.listen(port, function() {
 //     console.log('Our app is running on http://localhost:' + port);
 // });
+/////////////////////////////////////////////////////////////////////
+// ● Create=save() 
+// ● Read= find() - like select
+// ● Update=update() 
+// ● Delete =remove()
+
+//var query = model.find(); // ->start selecting, select all
 
 var mongoose = require('mongoose'),
     consts   = require('./consts');
+var UserSchema = require('./define_schema_1');
 
 mongoose.connect(consts.MLAB_KEY);
 
-//define the MODEL:
-var UserSchema = require('./define_schema_1');
+
+
+//define the MODEL 1:       // access to data  
+                           // 'User' its a nickname to continued    
 var User = mongoose.model('User',UserSchema);
 
 
 mongoose.connect(consts.MLAB_KEY).then( () =>{
-    console.log(`connected: ${UserSchema}`);
-    mongoose.disconnect();
+    User.find({}, (err,user) => {
+      if(err)
+        console.log(`query error: ${err}`);
+      console.log(`User: ${User}`);
+      mongoose.disconnect();
+    });
+    // console.log(`connected: ${User}`);
   },
   err =>{
     console.log(`connection error: ${err}`);
   }
 
 );
+
+
+
+
