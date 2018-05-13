@@ -34,7 +34,7 @@ var User = mongoose.model('User',UserSchema);
 
 
 mongoose.connect(consts.MLAB_KEY).then( () =>{
-    User.find({}, (err,user) => {
+    UserSchema.find({}, (err,user) => {
       if(err)
         console.log(`query error: ${err}`);
       console.log(`User: ${User}`);
