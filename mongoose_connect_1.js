@@ -22,7 +22,7 @@
 
 var mongoose = require('mongoose'),
     consts   = require('./consts');
-var UserSchema = require('./define_schema_1');
+var User = require('./define_schema_1');
 
 mongoose.connect(consts.MLAB_KEY);
 
@@ -30,11 +30,11 @@ mongoose.connect(consts.MLAB_KEY);
 
 //define the MODEL 1:       // access to data  
                            // 'User' its a nickname to continued    
-var User = mongoose.model('User',UserSchema);
+// var User = mongoose.model('User',UserSchema);
 
 
 mongoose.connect(consts.MLAB_KEY).then( () =>{
-    UserSchema.find({}, (err,user) => {
+    User.find({}, (err,user) => {
       if(err)
         console.log(`query error: ${err}`);
       console.log(`User: ${User}`);
