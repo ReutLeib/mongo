@@ -1,8 +1,9 @@
 {
   "name": "mongo",
   "version": "1.0.0",
+
   "description": "",
-  "main": "mongoose_connect_2.js",
+  "main": "mongoose_connect_1.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node mongoose_connect_1.js"
@@ -11,6 +12,16 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
-    "mongoose": "^5.0.18"
-  }
+    "mongoose": "^5.1.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReutLeib/mongo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ReutLeib/mongo/issues"
+  },
+  "homepage": "https://github.com/ReutLeib/mongo#readme",
+  "description": ""
 }
