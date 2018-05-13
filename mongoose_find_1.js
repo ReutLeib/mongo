@@ -1,6 +1,7 @@
 var mongoose = require('mongoose'),
     consts   = require('./consts');
 mongoose.connect(consts.MLAB_KEY);
+
 //define the MODEL 1:  
 var UserSchema = require('./define_schema_1');
 
