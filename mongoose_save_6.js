@@ -3,16 +3,14 @@ var mongoose = require('mongoose'),
 mongoose.connect(consts.MLAB_KEY);
 
 //define the MODEL 1:  
-var UserSchema = require('./define_schema_1');
-
-var User = mongoose.model('User',UserSchema);
+var User = require('./define_schema_validate');
 
 mongoose.connect(consts.MLAB_KEY).then( () =>{
     var newUser1 = new User({
-      name: "Reut",
-      age:28,
+      name: "Shay",
+      age:44,
       status:"B",
-      groups: ["TV"]
+      groups: ["TV","Dance"]
       // groups: ["sports","music","books"]
     });
      newUser1.save((err) => {

@@ -8,7 +8,7 @@ var UserSchema = require('./define_schema_1');
 var User = mongoose.model('User',UserSchema);
 
 mongoose.connect(consts.MLAB_KEY).then( () =>{
-    var cond = {name:"Michael"};
+    var cond = {name:"Reuts"};
 
      User.remove(cond, (err) => {
       if(err)

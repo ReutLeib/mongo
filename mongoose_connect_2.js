@@ -1,7 +1,5 @@
 var consts   = require('./consts');
 var mongoose = require('mongoose');
-    
-
 mongoose.connect(consts.MLAB_KEY);
 
 //define the MODEL 2:
