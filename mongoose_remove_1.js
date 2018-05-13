@@ -8,18 +8,13 @@ var UserSchema = require('./define_schema_1');
 var User = mongoose.model('User',UserSchema);
 
 mongoose.connect(consts.MLAB_KEY).then( () =>{
-    var newUser1 = new User({
-      name: "Elbaz",
-      age:27,
-      status:"A",
-      groups: ["TV"]
-      // groups: ["sports","music","books"]
-    });
-     newUser1.save((err) => {
+    var cond = {name:"Michael"};
+
+     User.remove(cond, (err) => {
       if(err)
         console.log(`error: ${err}`);
       else{
-        console.log(`Saved doc: ${JSON.stringify(newUser1)}`);
+        console.log(`Removed doc`);
         mongoose.disconnect();
       }
      });
